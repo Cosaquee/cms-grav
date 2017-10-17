@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<div>
+						<h1 class="title">Grav</h1>
+						<h2 style="font-size: 1em;">Modern open source flat-file CMS</h2>
+					</div>
+				</section>
+				<section>
+					<div>
+						<h2>Zalety</h2>
+						<ul>
+							<li>Flat-file CMS</li>
+							<li>Użycie Markdown do tworzenia treści</li>
+							<li>Łatwa instalacja</li>
+							<li>Duże możliwości zarządzania treścia</li>
+							<li>Internacjonalizacja</li>
+							<li>Łatwe kopie bezpieczeństwa</li>
+							<li>Manipulacja mediami takimi jak zdjęcia</li>
+							<li>Łatwe tworzenie motywów</li>
+							<li>Admin Panel</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<section>
+						<div>
+							<h2>Flat-file CMS</h2>
+						</div>
+					</section>
+					<section>
+						<ul>
+							<li>Brak konieczności używania bazy danych</li>
+							<li>Łatwiejsza i przyjemniejsza instalacja</li>
+							<li>Duże możliwości konfiguracji ze względu na użyte technologie: YAML, Twig, Markdown</li>
+							<li>Łatwe skryptowanie oraz automatyczne zarządzanie przez zewnętrzne programy</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Markdown</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Możliwość tworzenia treści w tekstowy sposób</li>
+							<li>Wersjonowanie</li>
+							<li>Możliwość exportu z innych narzędzi</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Łatwa instalacja</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Brak bazy danych</li>
+							<li>PHP 5.5.9 minimum</li>
+							<li>Działa na PHP 7</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Duże możliwości zarządzania treścia</h2>
+					</section>
+					<section>
+						<ul>
+						<li>Markdown lub HTML</li>
+						<li>Automatyczne linkowanie stron</li>
+						<pre><code>
+[Linked Content](../path/slug/page)
+						</code></pre>
+						<li>Customowe pola</li>
+						<li>Łatwe zarządzanie tagami czy tematami</li>
+					</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Internacjonalizacja</h2>
+					</section>
+					<section>
+						<ul>
+							<li>Konfiguracja języka w calości w kodzie</li>
+							<li>Automaczyne wyciąganie języka z query params</li>
+							<li>Każde tłumaczenie to po prostu plik płaski</li>
+						</ul>
+					</section>
+				</section>
+
+			<section>
+				<section>
+					<h2>Backups</h2>
+				</section>
+				<section>
+					<ul>
+						<li>To po prostu pliki płaskie</li>
+						<pre><code>
+tar -cvf "$(date '+%y-%m-%d').tar.gz" grav/
+						</code></pre>
+					</ul>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Manipulacja zdjęciami</h2>
+				</section>
+				<section>
+					<li>Automatyczne obrabianie zdjęć</li>
+					<li>Cache przy użyciu Symfony Doctrine</li>
+					<li>Łatwe używanie zdjęc w treści</li>
+					<pre><code>![Alt Text](../path/image.ext)</code></pre>
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Motywy</h2>
+				</section>
+				<section>
+					<li>Rozszerzanie już istniejących</li>
+					<li>Użycie dowolnej biblioteki CSS</li>
+					<li>Język templatów Twig daje duże mozliwości</li>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Admin panel</h2>
+				</section>
+				<section>
+					<li>Opcjonalny panel zarządzania stworzony przez twórców</li>
+					<li>Zarządzanie użytkonikami, treścią, tagami</li>
+					<li>Łatwo rozszerzalny</li>
+				</section>
+			</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
